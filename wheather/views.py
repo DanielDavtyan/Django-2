@@ -5,11 +5,19 @@ from .forms import CityForm
 
 
 def index(request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=9e6ee3ea8091d0430e916bffe9106cd2'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=5aa8273002e15c2c4a8d36bddaa1e027'
+    #url2 = 'http://api.openweathermap.org/data/2.5/weather?id={}&appid=cb718ae80779c2c4242d37314a76d398'
     err_msg = ''
     message = ''
     message_class = ''
+    #city_id = 3099778
 
+   # while city_id < 3100883:
+    #    c = requests.get(url2.format(city_id)).json()
+     #   if c['cod'] == 200:
+      #      b = ObjectInfo(cityName=c['name'])
+       #     b.save()
+        #city_id = city_id + 5
 
     if request.method == 'POST':
         form = CityForm(request.POST)
